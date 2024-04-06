@@ -3,7 +3,8 @@ package repositories
 import (
 	"fmt"
 
-	dto "github.com/greetinc/greet-auth-srv/dto/auth"
+	dto "greet-home-srv/dto/user"
+
 	entity "github.com/greetinc/greet-auth-srv/entity"
 	util "github.com/greetinc/greet-util/s"
 )

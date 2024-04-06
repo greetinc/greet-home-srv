@@ -2,9 +2,12 @@ package services
 
 import (
 	"fmt"
+
+	entity "github.com/greetinc/greet-auth-srv/entity"
+
 	dto "greet-home-srv/dto/user"
-	"greet-home-srv/entity"
-	"greet-home-srv/util"
+
+	util "github.com/greetinc/greet-util/s"
 )
 
 func (s *userService) GetAll(req dto.UserRequest) ([]dto.UserResponse, error) {

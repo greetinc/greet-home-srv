@@ -3,7 +3,8 @@ package handlers
 import (
 	"fmt"
 
-	dto "github.com/greetinc/greet-auth-srv/dto/auth"
+	dto "greet-home-srv/dto/user"
+
 	e "github.com/greetinc/greet-util/s/response"
 
 	"github.com/labstack/echo/v4"

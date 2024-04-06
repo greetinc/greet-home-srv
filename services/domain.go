@@ -2,14 +2,13 @@ package services
 
 import (
 	dto "greet-home-srv/dto/user"
-	m "greet-home-srv/middlewares"
-	repositories "greet-home-srv/repositories/user"
+	"greet-home-srv/repositories"
+
+	m "github.com/greetinc/greet-middlewares/middlewares"
 )
 
 type UserService interface {
 	GetAll(dto.UserRequest) ([]dto.UserResponse, error)
-	GetFriend(req dto.FriendRequest) ([]dto.FriendResponse, error)
-	Create(req dto.LikeRequest) (dto.LikeResponse, error)
 	IsValidProfileID(profileID string) bool
 }
 

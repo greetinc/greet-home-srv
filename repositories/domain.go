@@ -1,13 +1,16 @@
 package repositories
 
 import (
-	dto "github.com/greetinc/greet-auth-srv/dto/auth"
+	dto "greet-home-srv/dto/user"
 
+	entity "github.com/greetinc/greet-auth-srv/entity"
 	"gorm.io/gorm"
 )
 
 type UserRepository interface {
 	GetAll(req dto.UserRequest) ([]dto.UserResponse, error)
+	GetUserCoordinates(userID string) (entity.RadiusRange, error)
+	GetUserByProfileID(profileID string) (*entity.User, error)
 }
 
 type userRepository struct {
