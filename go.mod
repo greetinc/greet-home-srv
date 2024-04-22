@@ -4,8 +4,8 @@ go 1.21.0
 
 require (
 	github.com/greetinc/greet-auth-srv v0.0.0-20240405071853-90ea8bc6b418
-	github.com/greetinc/greet-middlewares v0.0.0-20240406002902-549f222108c5
-	github.com/greetinc/greet-util v0.0.0-20240405155252-60b487b4d657
+	github.com/greetinc/greet-middlewares v0.0.0-20240406035850-9a0dc3f0c73e
+	github.com/greetinc/greet-util v0.0.0-20240407024706-b876927c343b
 	github.com/joho/godotenv v1.5.1
 	github.com/labstack/echo/v4 v4.11.4
 	gorm.io/driver/postgres v1.5.7

@@ -2,6 +2,7 @@ package configs
 
 import (
 	"fmt"
+	"greet-home-srv/entity"
 	"log"
 	"os"
 	"time"
@@ -40,7 +41,7 @@ func InitDB() *gorm.DB {
 		log.Fatal(err)
 	}
 
-	sqlDB, err := db.DB()
+	sqlDB, _ := db.DB()
 
 	// SetMaxIdleConns sets the maximum number of connections in the idle connection pool.
 	sqlDB.SetMaxIdleConns(10)
@@ -53,7 +54,9 @@ func InitDB() *gorm.DB {
 
 	// Migrate the schema
 	db.AutoMigrate(
-	// entity
+		&entity.Friend{},
+		&entity.RadiusRange{},
+		&entity.BoostProfile{},
 	)
 
 	return db
